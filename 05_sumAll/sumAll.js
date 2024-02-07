@@ -1,6 +1,6 @@
 const sumAll = function(firstVal, secondVal) {
     let rollingSum = 0;
-    if (firstVal < 0 || secondVal < 0) return 'ERROR'
+    if (firstVal < 0 || secondVal < 0 || isNaN(firstVal) || isNaN(secondVal) || typeof firstVal === 'string' || typeof secondVal === 'string') return 'ERROR'
     else if (firstVal < secondVal)
         for (i = firstVal; i <= secondVal; i++) {
         rollingSum = rollingSum + i;
